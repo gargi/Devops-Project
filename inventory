@@ -1,0 +1,1 @@
+aws ansible_ssh_host=52.33.151.4 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=/Users/Shanil/devops/HW1/aws_hw1.pem
