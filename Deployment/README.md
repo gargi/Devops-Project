@@ -43,10 +43,10 @@ We have used proxy server to route 10% of the traffic to the canary and remainin
 [Demonstration of monitoring and disabling traffic to canary on receiving an alert](https://www.youtube.com/watch?v=73Zdck7cYvM&feature=youtu.be)  
 Please note: Alerts are sent after 5 minutes if the usage is above threshold. As that would be a long waiting time, for this video we have used test alert to demonstrate that canary traffic is disabled when an alert is sent. However, we have attached screenshots above to demonstrate that an alert mail is sent when the threshold is crossed.
 
-* ### References:  
-
+* ### References and Credits:  
+1. Docker installation ansible role
 https://github.com/angstwad/docker.ubuntu/
-
+2. New Relic installation ansible role for basic installation
 https://github.com/sivel/ansible-newrelic
-
+3. AWS instance creation API wrapper
 https://github.com/mpancha/hw1
