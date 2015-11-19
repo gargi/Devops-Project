@@ -7,5 +7,5 @@ Gargi Rajadhyaksha (gsrajadh)
 
 Following are the project milestones:
 * [Build](https://github.com/gsrajadh/Devops-Project/blob/master/build)
-* [Test](https://github.com/gsrajadh/Devops-Project/tree/master/test%2Banalysis)
+* [Test](https://github.com/gsrajadh/Devops-Project/tree/master/test%2Banalysis)  
 *[Deployment](https://github.com/gsrajadh/Devops-Project/tree/master/Deployment)
