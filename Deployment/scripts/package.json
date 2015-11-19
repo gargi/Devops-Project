@@ -1,0 +1,23 @@
+{
+  "name": "deployment",
+  "version": "0.0.0",
+  "description": "Infrastructure creation",
+  "main": "main.js",
+  "dependencies": {
+    "body-parser": "~1.14.1",
+    "express": "~4.13.3",
+    "express-logger": "0.0.3",
+    "http": "0.0.0",
+    "http-proxy": "^1.12.0",
+    "mailin": "~3.0.1",
+    "multer": "~1.1.0",
+    "node-ansible": "~0.5.2",
+    "redis": "~2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mitul Panchal",
+  "license": "BSD-2-Clause"
+}

@@ -1,9 +1,0 @@
----
--  hosts: all
-   sudo: yes
-   roles:
-       - role: crushlovely.newrelic
-         key: ce741e53258eb96740dbe5a2ada8074e0d704712
-       - role: angstwad.docker_ubuntu
-         ssh_port: 2222
-         kernel_package_state: present
