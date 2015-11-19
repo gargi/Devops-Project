@@ -17,7 +17,7 @@ For this milestone, we have created two environments: Canary and Production. The
 Git commit to dev branch will automatically trigger Jenkins build and testing process. If build and testing is successful, the application is automatically deployed in canary environment using ansible.
 Whenever a change is pushed to release branch, it will trigger build and testing. On the success of it, application will be deployed to production environment. We have achieved this using post receive hooks(web hooks) and ansible tasks.
 
- * #### Screencast:  
+* #### Screencast:
 [Demonstration of configuration and deployment in production environment and proxy server](https://vimeo.com/146164018)
 
 
