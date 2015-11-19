@@ -14,9 +14,7 @@ For this milestone, we have created two environments: Canary and Production. The
  [configure.py](https://github.com/gsrajadh/Devops-Project/blob/master/Deployment/scripts/configure.py) script is our infrastructure management module. This module automatically creates AWS instance for production and canary environment. Using ansible playbook, the module installs docker for App container and New Relic for monitoring on these instances.
 
 * ### Deploy software to the production environment
-Git commit to dev branch will automatically trigger Jenkins build and testing process using post-commit hook. If build and testing is successful, the application is automatically deployed in canary environment using ansible. The idea here is to test the dev branch changes on canary environment and merge the changes to release branch if suitable.
-
-Whenever a change is pushed to release branch on github repository, it will trigger build and testing. On the success of it, application will be deployed to the production environment. We have achieved this using post receive hooks(web hooks) and ansible tasks.
+Git commit to dev branch will automatically trigger Jenkins build and testing process using post-commit hook. If build and testing is successful, the application is automatically deployed in canary environment using ansible. The idea here is to test the dev branch changes on canary environment and merge the changes to release branch if suitable. Whenever a change is pushed to release branch on github repository, it will trigger build and testing. On the success of it, application will be deployed to the production environment. We have achieved this using post receive hooks(web hooks) and ansible tasks.
 
 * #### Screencast:
 [Demonstration of configuration and deployment in production environment and proxy server](https://vimeo.com/146164018)
