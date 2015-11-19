@@ -1,6 +1,6 @@
 ## Milestone 3 - Deployment
 
- In this milestone we have automated the deployment of our project, Wed Application [Direwolf](https://github.ncsu.edu/mpancha/Direwolf) in production environment.
+ In this milestone we have automated the deployment of our project, Web Application [Direwolf](https://github.ncsu.edu/mpancha/Direwolf) in production environment.
 
 ### Setup
 
@@ -27,7 +27,7 @@ We have configured feature flags using redis. When flag is set, admin user canno
 [Feature Flag Demo](https://www.youtube.com/watch?v=KYcThmDIB44&edit=vd)
 
 * ### Monitoring deployed application
-We have used  New Relic to monitor the application we have deployed. When the CPU usage increases above 20% or when memory usage increases above 30%, an email is sent as an alert.
+We have used  New Relic to monitor the application we have deployed. When the CPU usage increases above 20% or when memory usage increases above 30%, an email is sent as an alert. We are also monitoring application using newrelic ruby gem.
 
 Canary Monitoring  
 
