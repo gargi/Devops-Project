@@ -1,6 +1,6 @@
 ## Milestone 3 - Deployment
 
- In this milestone we have automated the deployment of our project, [Direwolf](https://github.ncsu.edu/mpancha/Direwolf) in production environment.
+ In this milestone we have automated the deployment of our project, Wed Application [Direwolf](https://github.ncsu.edu/mpancha/Direwolf) in production environment.
 
 ### Setup
 
@@ -11,7 +11,7 @@ For this milestone, we have created two environments: Canary and Production. The
 ### Capabilities
 
 * #### Automatic configuration of production environment
- We have configured instances on AWS for canary and production environment using [configure.py](https://github.com/gsrajadh/Devops-Project/blob/master/Deployment/scripts/configure.py) script. Using ansible playbook, we have installed docker and New Relic for monitoring on these instances.
+ [configure.py](https://github.com/gsrajadh/Devops-Project/blob/master/Deployment/scripts/configure.py) script is our infrastructure management module. This module automatically creates AWS instance for production and canary environment. Using ansible playbook, the module installs docker for App container and New Relic for monitoring on these instances.
 
 * ### Deploy software to the production environment
 Git commit to dev branch will automatically trigger Jenkins build and testing process. If build and testing is successful, the application is automatically deployed in canary environment using ansible.
