@@ -42,7 +42,7 @@ We have used proxy server to route 10% of the traffic to the canary and remainin
 
 * #### Screencast:  
 [Demonstration of monitoring and disabling traffic to canary on receiving an alert](https://www.youtube.com/watch?v=73Zdck7cYvM&feature=youtu.be)  
-Since alerts are sent after 5 minutes if the usage is above threshold for this video we have used test alert to demonstrate that canary traffic is disabled when an alert is sent. We have attached screenshots to demonstrate the alert feature.
+Please note: Alerts are sent after 5 minutes if the usage is above threshold. As that would be a long waiting time, for this video we have used test alert to demonstrate that canary traffic is disabled when an alert is sent. However, we have attached screenshots above to demonstrate that an alert mail is sent when the threshold is crossed.
 
 * ### References:  
 
