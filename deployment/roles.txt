@@ -1,2 +1,0 @@
-angstwad.docker_ubuntu
-crushlovely.newrelic
