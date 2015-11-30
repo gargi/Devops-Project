@@ -5,7 +5,7 @@
   - name: Canary App Container
     docker:
       name: canary
-      image: 52.33.241.189:5000/direwolf:canary
+      image: 52.32.39.187:5000/direwolf:canary
       state: reloaded
       pull: always
       expose: 3000

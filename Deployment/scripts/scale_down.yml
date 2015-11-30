@@ -2,12 +2,12 @@
 - hosts: all
   sudo: yes
   tasks:
-  - name: Production App Container
+  - name: Scale up app Container
     docker:
-      name: production
+      name: "{{production_instance}}"
       image: 52.32.39.187:5000/direwolf:production
-      state: reloaded
+      state: stopped
       pull: always
       expose: 3000
       ports:
-      - 3000:3000
+      - "{{production_port}}"

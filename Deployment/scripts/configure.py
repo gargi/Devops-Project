@@ -80,6 +80,8 @@ def aws(phase):
       print "Update Redis"
       red.set('canary',"http://"+canary+":3000")
       red.set('production', "http://"+production+":3000")
+      red.set('production0', "http://"+production+":3000")
+      red.set('instances',1);
       print red.get('canary')
       print red.get('production')
       print "\nWriting Inventory...**************************"
@@ -110,21 +112,27 @@ def aws(phase):
 
 # Calls node js to run load balancer and web hook
 def monitor():
-    #red = redis.StrictRedis(host='localhost', port=6379, db=0)
-    #red.set('canary',"http://52.91.89.147:3000")
+    print "Start nodejs main"
+    red = redis.StrictRedis(host='localhost', port=6379, db=0)
+    red.set('instances',1)
+    red.set('production',"http://54.210.97.176:3000")
+    red.set('production0',"http://54.210.97.176:3000")
+    #red.set('production1',"http://54.210.97.176:3001")
+    #red.set('production1',"http://54.173.102.23:3001")
+    #red.set('production2',"http://54.173.102.23:3002")
+    #red.set('canary',"http://54.173.102.23:3002")
     #print "Get Canary from redis"
     #print red.get('canary')
     #subprocess.check_output(["/usr/bin/nodejs", "main.js"])
-    print "Starting main.js"
-    p = Popen(["/usr/bin/nodejs", "main.js"], stdout = PIPE, 
-        stderr = PIPE)
-    for line in iter(p.stdout.readline, ''):
-       print line
-    rc = p.wait()
-    p.stdout.close()
+    #print "Starting main.js"
+    #p = Popen(["/usr/bin/nodejs", "main.js"], stdout = PIPE, 
+    #    stderr = PIPE)
+    #for line in iter(p.stdout.readline, ''):
+    #   print line
+    #rc = p.wait()
+    #p.stdout.close()
 
 def main(argv):
-  
    if len(argv)> 1 and argv[1] == "clean":
       aws(phase=0)
    elif len(argv)>1 and argv[1] == "monitor":

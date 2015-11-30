@@ -5,7 +5,7 @@
        - role: angstwad.docker_ubuntu
          ssh_port: 2222
          kernel_package_state: present
-         docker_opts: "--insecure-registry 52.33.241.189:5000"
+         docker_opts: "--insecure-registry 52.32.39.187:5000"
        - { role: crushlovely.newrelic, newrelic_license_key: ce741e53258eb96740dbe5a2ada8074e0d704712 }
    post_tasks:	
        - copy: src=./nrsysmond.cfg dest=/etc/newrelic/nrsysmond.cfg owner=root group=newrelic mode=0644
