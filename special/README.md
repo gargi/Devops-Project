@@ -36,6 +36,6 @@ The scale down procedure goes through following states:
 =============
 
 
-[Screencast for Flamegraphs](https://youtu.be/vvVSaXT9mfs)
+[Screencast for Flamegraph](https://youtu.be/vvVSaXT9mfs)
 
 Presentation of the entire continous integration pipeline can be found [here]().
