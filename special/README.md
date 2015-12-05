@@ -30,5 +30,12 @@ The scale down procedure goes through following states:
 
 3. IDLE: Callback is invoked and marks the scale down success. Further monitors request per second to scale up or down. 
 
+[Screencast for Auto Scaling Docker](https://youtu.be/CFczPKizAxw)
+
 2. Flamegraph
 =============
+
+
+[Screencast for Flamegraphs](https://youtu.be/vvVSaXT9mfs)
+
+Presentation of the entire continous integration pipeline can be found [here]().
