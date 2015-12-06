@@ -34,7 +34,7 @@ The scale down procedure goes through following states:
 
 2. Flamegraph
 =============
-In this feature we have implemented functionality to generate "flamegraph" in case of application crash. We have used Direwolf (A RoR application) to demo this feature. Flamegraph feature has been implemented in app using Ruby and the following Gems:
+In this feature we have implemented functionality to generate "flamegraph" in case of application crash. We have used [Direwolf](https://github.ncsu.edu/mpancha/Direwolf) (A RoR application) to demo this feature. Flamegraph feature has been implemented in app using Ruby and the following Gems:
 
 1. gem ['rack-mini-profiler'](https://rubygems.org/gems/rack-mini-profiler/versions/0.9.7): This is the gem on which the flamegraph gem is dependent. This is used by the Flamegraph gem to track the functional flow or requests. 
 
