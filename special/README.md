@@ -4,7 +4,7 @@ We have implemented 2 components as part of special milestone.
 1. Auto Scaling Docker Deployment
 =================================
 The infrastructure/proxy server node monitors the request per seconds for the deployed application. Based on the request per second threshold the infrastructure module will trigger autoscaling.
-The Redis container is on infrastructure node is used to store the instance count and IP:port of the production containers.
+The Redis container on infrastructure node is used to store the instance count and IP:port of the production containers.
 
 Scale Up
 --------
