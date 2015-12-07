@@ -6,6 +6,8 @@ We have implemented 2 components as part of special milestone.
 The infrastructure/proxy server node monitors the request per seconds for the deployed application. Based on the request per second threshold the infrastructure module will trigger autoscaling.
 The Redis container on infrastructure node is used to store the instance count and IP:port of the production containers.
 
+![](https://raw.githubusercontent.com/gsrajadh/Devops-Project/master/special/Screenshots/Screen%20Shot%202015-12-06%20at%2010.58.30%20PM.png)
+
 Scale Up
 --------
 If the request per second goes above the threshold then Scale Up procedure is initiated. The new container instance called production#{instance count} is started using anisble playbook [scale_up.yml](scale_up.yml).
@@ -28,21 +30,24 @@ The scale down procedure goes through following states:
 
 2. BUSY: When scale down procedure is initiated. The instance count is decremented and ansible [playbook](scale_down.yml) is invoked. The callback is registered to track the status of scale down.
 
-3. IDLE: Callback is invoked and marks the scale down success. Further monitors request per second to scale up or down. 
+3. IDLE: Callback is invoked and marks the scale down success. Further monitors request per second to scale up or down.
 
+#### Screencast
 [Screencast for Auto Scaling Docker](https://youtu.be/CFczPKizAxw)
 
 2. Flamegraph
 =============
 In this feature we have implemented functionality to generate "flamegraph" in case of application crash. We have used [Direwolf](https://github.ncsu.edu/mpancha/Direwolf) (A RoR application) to demo this feature. Flamegraph feature has been implemented in app using Ruby and the following Gems:
 
-1. gem ['rack-mini-profiler'](https://rubygems.org/gems/rack-mini-profiler/versions/0.9.7): This is the gem on which the flamegraph gem is dependent. This is used by the Flamegraph gem to track the functional flow or requests. 
+1. gem ['rack-mini-profiler'](https://rubygems.org/gems/rack-mini-profiler/versions/0.9.7): This is the gem on which the flamegraph gem is dependent. This is used by the Flamegraph gem to track the functional flow or requests.
 
 2. gem ['stackprof'](https://rubygems.org/gems/stackprof/versions/0.2.7): This gem is used to get stack trace of failed request. The stack trace is then parsed to generate the flamegraph.
 
 3. gem ['flamegraph'](https://github.com/SamSaffron/flamegraph?pp=flamegraph): The "Flamegraph" gem is actually used for constructing the flamegraph for the failed request from the parsed output of the "stackprof" gem.
 
+![](https://raw.githubusercontent.com/gsrajadh/Devops-Project/master/special/Screenshots/Screen%20Shot%202015-12-06%20at%2010.56.30%20PM.png)
 
+#### Screencast
 [Screencast for Flamegraph](https://youtu.be/vvVSaXT9mfs)
 
-Presentation of the entire continous integration pipeline can be found [here](https://www.youtube.com/watch?v=Um-hNlRYMGY).
+Presentation of the entire continuous integration pipeline can be found [here](https://www.youtube.com/watch?v=Um-hNlRYMGY).
